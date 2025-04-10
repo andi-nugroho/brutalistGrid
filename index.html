@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brutalist Palette Widget</title>
+    <script src="hgwidget.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== Reset and Baseline Styles ===== */
+        *,
+        :after,
+        :before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: inherit;
+            color: inherit;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            margin: 2rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        ol,
+        pre {
+            margin-bottom: 1rem;
+        }
+
+        h2,
+        h3 {
+            margin-top: 2rem;
+        }
+
+        ul,
+        ol {
+            padding-left: 1.5rem;
+            line-height: 1.8;
+        }
+
+        pre,
+        code {
+            font-size: 0.95rem;
+            background-color: #ececec;
+            padding: 3px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        pre {
+            margin-bottom: 1rem;
+            padding: 5px;
+            padding-bottom: 10px;
+        }
+
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Hue Grid Color Palette Widget</h1>
+        <p>
+            HueGrid is a minimalist, brutalist-inspired color palette widget &ndash; made
+            by <a href="https://monolyt.co">Monolyt</a> &ndash; that displays colors and allows users to
+            copy their hex values with a single click.
+            The widget is easy to integrate and customize.
+        </p>
+
+        <script>
+            new HueGrid(["ee6a59", "3a3f58", "f9ac67", "ece6cd"], "Favorite Colors", "This is a very nice color palette.");
+        </script>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Displays a color palette with the provided hex values.</li>
+            <li>Copies the hex value of a color to the clipboard when clicked.</li>
+            <li>Automatically adjusts text color for light backgrounds.</li>
+            <li>Simple and clean design with CSS customization.</li>
+            <li>Optional description for your palette.</li>
+            <li>Shareable link to your palette.</li>
+        </ul>
+
+        <h2>Usage</h2>
+        <ol>
+            <li>
+                <a href="https://github.com/monolyt/HueGrid" target="_blank">Download</a> the <code>hgwidget.js</code>
+                file and include it in your project:
+                <code>&lt;script src="hgwidget.js"&gt;&lt;/script&gt;</code>
+            </li>
+            <li>
+                Create a new <code>HueGrid</code> instance with your colors, palette name, and optional description:
+                <pre>
+&lt;script&gt;
+    new HueGrid(["hexvalue1", "hexvalue2"], "Title", "Description");
+&lt;/script&gt;</pre>
+            </li>
+        </ol>
+
+        <h2>Examples</h2>
+        <h3>Widget without description</h3>
+        <p>Code:</p>
+        <pre>
+&lt;script&gt;
+    new HueGrid(["282726", "86817c", "d6cab0"], "Five Colors");
+&lt;/script&gt;</pre>
+        <p>Result:</p>
+        <script>
+            new HueGrid(["657f38", "ddbcbc"], "Two Colors");
+        </script>
+
+        <h3>Widget with description</h3>
+        <p>Code:</p>
+        <pre>
+&lt;script&gt;
+    new HueGrid(["657f38", "ddbcbc"], "Two Colors", "Here you can describe your palette");
+&lt;/script&gt;</pre>
+        <p>Result:</p>
+        <script>
+            new HueGrid(["0a3f55", "e93024", "ff7c44", "ece7e1", "bbc3b5"], "Five Colors", "Here you can describe your palette");
+        </script>
+
+        <h2>Customization</h2>
+        <p>
+            Customize the widget’s appearance by modifying the CSS variables:
+        </p>
+        <pre>
+:root {
+    --hg-background-color: #ffffff;
+    --hg-border-color: #000000;
+    --hg-font-size: 16px;
+    --hg-font-size-description: 14px;
+    --hg-font-color: #000000;
+    --hg-height: 150px;
+    --hg-margin: 2rem auto;
+    --hg-info-padding: 0 15px;
+    --hg-info-height: 36px;
+    --hg-hover-width: 80px;
+    --hg-transition-duration: 0.1s;
+    --hg-font-weight: bold;
+    --hg-light-color: #000000;
+    --hg-dark-color: #ffffff;
+}</pre>
+        <p>Adjust these variables to match your design needs.</p>
+
+        <h2>License</h2>
+        <p>This project is open-source and available under the MIT License.</p>
+
+        <h2>Download</h2>
+        <ul>
+            <li><a href="https://monolyt.co" target="_blank">Monolyt.co</a></li>
+            <li><a href="https://github.com/monolyt/HueGrid" target="_blank">HueGrid Github Repository</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
